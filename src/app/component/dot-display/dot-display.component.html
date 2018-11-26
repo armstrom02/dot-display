@@ -1,0 +1,11 @@
+<div class="container">
+  <input type="text"  [(ngModel)]="textInput" (keyup) = "generateAlphabet()"> 
+  <button (click)="moveleft()">move Right</button>
+  <table>
+    <tr class="row" *ngFor="let row of dotArray">
+      <td class="column" *ngFor="let column of row">
+        <span class="inActiveDot" [class.activeDot]="column.active"></span>
+      </td>
+    </tr>
+  </table>
+</div>
